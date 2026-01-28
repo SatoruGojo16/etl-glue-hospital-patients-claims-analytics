@@ -1,0 +1,33 @@
+﻿borough,Designation,Local authority,Political control,Headquarters,sq mi,km2,Population,Map ref.,borough_abbrev,borough_code
+Barking and Dagenham,Outer,Barking and Dagenham London Borough Council,Labour,"Town Hall, 1 Town Square",13.93,36.1,"219,992",25,BAD,10001
+Barnet,Outer,Barnet London Borough Council,Labour,"2 Bristol Avenue, Colindale",33.49,86.7,"389,101",31,BAR,10002
+Bexley,Outer,Bexley London Borough Council,Conservative,"Civic Offices, 2 Watling Street",23.38,60.6,"247,835",23,BEX,10003
+Brent,Outer,Brent London Borough Council,Labour,"Brent Civic Centre, Engineers Way",16.7,43.3,"341,221",12,BRE,10004
+Bromley,Outer,Bromley London Borough Council,Conservative,"Civic Centre, Churchill Court",57.97,150.1,"329,578",20,BRO,10005
+Camden,Inner,Camden London Borough Council,Labour,5 Pancras Square,8.4,21.8,"218,049",11,CAM,10006
+Croydon,Outer,Croydon London Borough Council,No overall control,"Bernard Weatherill House, Mint Walk",33.41,86.5,"392,224",19,CRY,10007
+Ealing,Outer,Ealing London Borough Council,Labour,"Perceval House, 14-16 Uxbridge Road",21.44,55.5,"369,937",13,EAL,10008
+Enfield,Outer,Enfield London Borough Council,Labour,"Civic Centre, Silver Street",31.74,82.2,"327,224",30,ENF,10009
+Greenwich,Inner [note 3],Greenwich London Borough Council,Labour,"Woolwich Town Hall, Wellington Street",18.28,47.3,"291,080",22,GRE,10010
+Hackney,Inner,Hackney London Borough Council,Labour,"Hackney Town Hall, Mare Street",7.36,19.1,"261,491",9,HAC,10011
+Hammersmith and Fulham,Inner,Hammersmith and Fulham London Borough Council,Labour,"Town Hall, King Street",6.33,16.4,"185,238",4,HAF,10012
+Haringey,Outer[note 3],Haringey London Borough Council,Labour,"Civic Centre, High Road",11.42,29.6,"261,811",29,HAR,10013
+Harrow,Outer,Harrow London Borough Council,Conservative,"Civic Centre, Station Road",19.49,50.5,"261,185",32,HAW,10014
+Havering,Outer,Havering London Borough Council,No overall control,"Town Hall, Main Road",43.35,112.3,"264,703",24,HAV,10015
+Hillingdon,Outer,Hillingdon London Borough Council,Conservative,"Civic Centre, High Street",44.67,115.7,"310,681",33,HIL,10016
+Hounslow,Outer,Hounslow London Borough Council,Labour,"Hounslow House, 7 Bath Road",21.61,56,"290,488",14,HOU,10017
+Islington,Inner,Islington London Borough Council,Labour,"Customer Centre, 222 Upper Street",5.74,14.9,"220,373",10,ISL,10018
+Kensington and Chelsea,Inner,Kensington and Chelsea London Borough Council,Conservative,"The Town Hall, Hornton Street",4.68,12.1,"146,154",3,KAC,10019
+Kingston upon Thames,Outer,Kingston upon Thames London Borough Council,Liberal Democrat,"Guildhall, High Street",14.38,37.2,"168,302",16,KUT,10020
+Lambeth,Inner,Lambeth London Borough Council,Labour,"Lambeth Town Hall, Brixton Hill",10.36,26.8,"316,812",6,LAM,10021
+Lewisham,Inner,Lewisham London Borough Council,Labour,"Town Hall, 1 Catford Road",13.57,35.1,"298,653",21,LEW,10022
+Merton,Outer,Merton London Borough Council,Labour,"Civic Centre, London Road",14.52,37.6,"210,709",17,MER,10023
+Newham,Outer[note 3],Newham London Borough Council,Labour,"Newham Dockside, 1000 Dockside Road",13.98,36.2,"358,645",27,NEW,10024
+Redbridge,Outer,Redbridge London Borough Council,Labour,"Town Hall, 128-142 High Road",21.78,56.4,"310,911",26,RED,10025
+Richmond upon Thames,Outer,Richmond upon Thames London Borough Council,Liberal Democrat,"Civic Centre, 44 York Street",22.17,57.4,"194,894",15,RIC,10026
+Southwark,Inner,Southwark London Borough Council,Labour,160 Tooley Street,11.14,28.9,"311,913",7,SOU,10027
+Sutton,Outer,Sutton London Borough Council,Liberal Democrat,"Civic Offices, St Nicholas Way",16.93,43.8,"209,602",18,SUT,10028
+Tower Hamlets,Inner,Tower Hamlets London Borough Council,Independent,"Town Hall, Whitechapel Road",7.63,19.8,"325,789",8,TWH,10029
+Waltham Forest,Outer,Waltham Forest London Borough Council,Labour,"Waltham Forest Town Hall, Forest Road",14.99,38.8,"275,887",28,WAF,10030
+Wandsworth,Inner,Wandsworth London Borough Council,Labour,"The Town Hall, Wandsworth High Street",13.23,34.3,"329,035",5,WAN,10031
+Westminster,Inner,Westminster City Council,Labour,"Westminster City Hall, 64 Victoria Street",8.29,21.5,"211,365",2,WES,10032
