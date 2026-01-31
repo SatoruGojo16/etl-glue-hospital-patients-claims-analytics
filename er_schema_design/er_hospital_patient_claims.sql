@@ -4,7 +4,10 @@
 Table dim_patient {
   patient_ref_key integer [primary key]
   patient_id varchar
-  name varchar
+  name_prefix varchar
+  first_name varchar
+  last_name varchar
+  patient_full_name varchar
   date_of_birth varchar
   phone_number varchar
   email_id varchar
@@ -27,7 +30,7 @@ Table dim_policy{
   policy_ref_key integer [primary key]
   policy_id varchar
   policy_start_date varchar
-  policy_expire_date varchar
+  policy_end_date varchar
   premium_amount varchar
   coverage_limit varchar
   effective_start_date varchar
@@ -38,10 +41,15 @@ Table dim_policy{
 Table dim_address {
   address_ref_key integer [primary key]
   address_id varchar
+  addressline varchar
   borough varchar
-  region varchar
-  latitude varchar 
-  longitude varchar
+  borough_level varchar
+  borough_latitude varchar
+  borough_longitude varchar
+  borough_abbrev varchar
+  borough_code varchar
+  city varchar
+  state varchar
   effective_start_date varchar
   effective_end_date varchar
   is_current varchar
@@ -50,9 +58,11 @@ Table dim_address {
 Table dim_claims {
   claim_ref_key integer [primary key]
   claim_id varchar
+  high_risk_claim_flag  varchar
   claim_initialized_date varchar
   claim_request_amount varchar
   claim_status varchar
+  claim_rejected_reason varchar
 }
 
 Table fact_claims_hist
