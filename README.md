@@ -2,7 +2,7 @@
 
 An end-to-end AWS Data Engineering project demonstrating the design and implementation of a scalable ETL pipeline using AWS Glue, Amazon S3, and Amazon Redshift.
 
-This project processes hospital patient and claims data through a structured multi-layer architecture and prepares analytics-ready datasets for reporting and business intelligence.
+This project processes hospital patient and claims data through a structured Medallion architecture and prepares analytics-ready datasets for reporting and business intelligence.
 
 ---
 
@@ -10,7 +10,7 @@ This project processes hospital patient and claims data through a structured mul
 
 This pipeline simulates a real-world healthcare data engineering use case where patient and claims data are:
 
-- Extracted from raw sources
+- Extracted from raw sources from Kinesis to S3 via Flink
 - Transformed using PySpark in AWS Glue
 - Loaded into Amazon Redshift
 - Structured using dimensional modeling
@@ -19,16 +19,18 @@ This pipeline simulates a real-world healthcare data engineering use case where 
 The architecture follows a Medallion-style layered approach (Raw → Staging → Curated).
 
 ---
-
 ## 🏗️ Architecture
 
+![Architecture ETL Glue Hospital Patients Claims](images/arch-etl-glue-hospital-patients-claims.png)
 ### 🔹 Data Flow
 
-1. Raw data is ingested into Amazon S3 (CSV/JSON format)
-2. AWS Glue ETL jobs process and transform the data using PySpark
-3. Cleaned and structured data is written back to S3
-4. Data is loaded into Amazon Redshift for analytics
-5. SQL queries are used for reporting and insights
+1. Data is getting generated from lambda to s3 via Kinesis
+2. Inital data handling and filteration is done through Flink and loaded to Firestore
+3. Raw data from Kinesis Firehose is processed into Amazon S3 (CSV format)
+4. AWS Glue ETL jobs process and transform the data using PySpark
+5. Cleaned and structured data is written back to S3 Staging layer
+6. Data is loaded from Staging layer into Curation layer of Amazon Redshift for analytics
+7. SQL queries are used for reporting and insights using Power BI
 
 ---
 
@@ -81,14 +83,17 @@ etl-glue-hospital-patients-claims-analytics/
 
 ## 📊 Data Modeling
 
+![ER Diagram - Data Model Hospital Patients Claims](er_schema_design/er_hospital_patient_claims.svg)
+
 The warehouse follows a dimensional model:
 
-- Fact Table: Claims
+- Fact Table: Claims History
 - Dimension Tables:
   - Patients
-  - Providers
-  - Treatment Categories
-  - Time
+  - Policy
+  - Claims
+  - Address
+  - Date
 
 This structure enables efficient analytical queries and BI reporting.
 
@@ -130,16 +135,6 @@ This structure enables efficient analytical queries and BI reporting.
 - Designing dimensional data models
 - Applying SCD Type 2 for historical tracking
 - Writing optimized SQL for analytics workloads
-
----
-
-## 🔮 Future Enhancements
-
-- Add Airflow / AWS Step Functions orchestration
-- Implement automated data quality validation
-- Integrate monitoring & alerting
-- Add dashboard visualization layer
-- CI/CD pipeline for deployment automation
 
 ---
 
