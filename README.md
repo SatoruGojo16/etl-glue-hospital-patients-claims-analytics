@@ -54,6 +54,7 @@ etl-glue-hospital-patients-claims-analytics/
 ├── redshift_sql_queries/      # SQL scripts for schema & analytics
 ├── data_lookup/               # Lookup/reference datasets
 ├── data_producer/             # Sample data generation scripts
+├── flink_sql_queries/         # Flink SQL queries from AWS Managed Service for Flink 
 ├── er_schema_design/          # ER diagram & schema design files
 ├── images/                    # Architecture diagrams
 ├── README.md
@@ -64,17 +65,22 @@ etl-glue-hospital-patients-claims-analytics/
 
 ## 🔄 ETL Pipeline Workflow
 
-### Step 1: Data Ingestion
-- Upload hospital patients and claims datasets to Amazon S3 (Raw layer)
+### Step 1: Data Generation
+- Hospital Patients and Claims data is getting generated from Lambda execution and sent to AWS Kinesis Stream for every 1 minute via Default Event bus
+- Generated data will be getting processed via AWS Managed Service for Flink Analytics
+- Processed data will be pushed to Kinesis Firehose to load data to S3 location
 
-### Step 2: Transformation (AWS Glue)
+### Step 2: Data Ingestion - Landing to Raw
+- Upload of hospital patients and claims datasets to Amazon S3 (landing layer) from Kinesis Firehose
+
+### Step 3: Transformation (AWS Glue) - Raw to Staging
 - Data cleansing
 - Schema standardization
 - Deduplication
 - Business rule implementation
 - Slowly Changing Dimension (SCD Type 2) logic
 
-### Step 3: Load to Redshift
+### Step 4: Load to Redshift - Staging to Curation
 - Creation of dimension and fact tables
 - Optimized SQL transformations
 - Aggregation queries for analytics
